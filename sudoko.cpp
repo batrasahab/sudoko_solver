@@ -46,11 +46,11 @@ bool solveSudoku(int mat[][9],int i,int j,int n){
     if(j==n){
         return solveSudoku(mat,i+1,0,n);
     }
-    //Blue cell
+    
     if(mat[i][j]!=0){
         return solveSudoku(mat,i,j+1,n);
     }
-    //White cell
+    
     for(int no=1;no<=9;no++){
         if(isSafe(mat,i,j,no,n)){
 
